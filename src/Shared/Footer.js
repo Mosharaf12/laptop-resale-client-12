@@ -7,7 +7,8 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content">
   <div>
    <img width="100" height="100" src={logo} alt="" />
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+    <p className='text-xl font-bold'>Laptop Resale Market</p>
+    <p>Copyright © 2022 - All right reserved by Laptop Resale Market</p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 
