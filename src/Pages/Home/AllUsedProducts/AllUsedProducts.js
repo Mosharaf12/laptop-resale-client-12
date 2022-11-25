@@ -22,7 +22,7 @@ const AllUsedProducts = () => {
                 ></ProductCategory>)
             }
         </div>
-        <div className='grid grid-cols-2 gap-10 my-10'>
+        <div className='grid md:grid-cols-2 gap-10 my-10'>
             {
                 laptops.map(laptop => <LaptopsCard
                 key={laptop._id}

@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Header = () => {
@@ -11,15 +11,15 @@ const Header = () => {
   };
 
   const navItems = <>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/blog'>Blog</Link></li>
+    <li><NavLink to='/'>Home</NavLink></li>
+    <li><NavLink to='/blog'>Blog</NavLink></li>
     {
     user?.uid ?
         <>
             <li><button onClick={handleLogButton}>Log Out</button></li>
 
         </>
-        : <li><Link to='/login'>Login</Link></li>
+        : <li><NavLink to='/login'>Login</NavLink></li>
 }
   </>
   

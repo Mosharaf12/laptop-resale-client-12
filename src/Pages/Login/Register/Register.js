@@ -18,20 +18,22 @@ const Register = () => {
         const name = form.name.value;
         const email= form.email.value;
         const password = form.password.value;
-        console.log(name,email,password)
+        const role = form.role.value;
+        console.log(name,email,password,role)
+
         createUser(email,password)
         .then(result =>{
             const user = result.user;
             console.log(user);
             handleProfile(name)
             toast.success('Registration successful')
-            
+            userRole(name,email,role)
+
+ 
         })
         .catch(err=>{
             console.err(err)
         })
-        
-
     }
     const handleProfile=(name)=>{
       const   profile={
@@ -59,6 +61,26 @@ const Register = () => {
         })
 
     }
+    const userRole =(name,email,role)=>{
+        const user = {name, email, role}
+        console.log(name,email, role)
+        fetch(`http://localhost:5000/users`,{
+            method: "POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(user)
+
+        })
+        .then(res=> res.json())
+        .then(data=> {
+            console.log(data);
+        })
+        .catch(err=>{
+            console.error(err)
+        })
+
+    }
 
 
     return (
@@ -74,10 +96,21 @@ const Register = () => {
                     <label className="label"> <span className="label-text">Email</span></label>
                     <input name='email' type='email' className="input input-bordered w-full max-w-xs" />
                 </div>
+
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Password</span></label>
                     <input name='password' type='Password' className="input input-bordered w-full max-w-xs mb-5" />
                 </div>
+
+                <div className="form-control w-full max-w-xs mb-6">
+                    <label className="label"> <span className="label-text">What is Your Role?</span></label>
+                    <select name='role' className="select select-bordered w-full max-w-xs">
+                     <option selected>User</option>
+                     <option>Seller</option>
+                    </select>
+                    
+                </div>
+
                 <input className='btn btn-accent w-full' type="submit" value='Register'  />
             </form>
             <p className='mt-3'>Already have an account<Link to='/login' className='text-primary'> please Login</Link></p>
