@@ -55,6 +55,9 @@ const Register = () => {
         .then(result=>{
             const user = result.user;
             console.log(user);
+            const role = 'buyer'
+            userRole(user.displayName,user.email, role)
+
         })
         .catch(err=>{
             console.error(err)
@@ -105,8 +108,8 @@ const Register = () => {
                 <div className="form-control w-full max-w-xs mb-6">
                     <label className="label"> <span className="label-text">What is Your Role?</span></label>
                     <select name='role' className="select select-bordered w-full max-w-xs">
-                     <option selected>User</option>
-                     <option>Seller</option>
+                     <option selected>buyer</option>
+                     <option>seller</option>
                     </select>
                     
                 </div>

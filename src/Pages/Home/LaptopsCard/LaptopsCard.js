@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LaptopsCard = ({laptop}) => {
-    const {picture,description,name,location,resaleprice,sallername,originalprice,yearsofuse}= laptop
+    const {_id,picture,description,name,location,resaleprice,sallername,originalprice,yearsofuse}= laptop
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
         <figure><img className='w-full' style={{width: "580px", height: "270px"}} src={picture} alt="Shoes" /></figure>
@@ -14,7 +14,7 @@ const LaptopsCard = ({laptop}) => {
             <h3 className='text-xl'> ৳ <s>{originalprice}</s> </h3>
           </div>
           <div className="card-actions justify-end">
-            <Link to='/'><button className="btn btn-info font-bold text-white">View Details</button></Link>
+            <Link to={`/laptop/${_id}`}><button className="btn btn-info font-bold text-white">View Details</button></Link>
           </div>
         </div>
       </div>

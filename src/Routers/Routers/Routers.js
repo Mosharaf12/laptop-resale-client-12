@@ -2,6 +2,7 @@ import { async } from "@firebase/util";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import DetailsCard from "../../Pages/Home/DetailsCard/DetailsCard";
 import FilterByCategorey from "../../Pages/Home/FilterByCategorey/FilterByCategorey";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/laptop/:id',
+                loader: async({params})=> fetch(`http://localhost:5000/laptop/${params.id}`),
+                element: <DetailsCard></DetailsCard>
             },
             {
                 path: '/login',
