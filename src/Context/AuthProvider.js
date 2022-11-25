@@ -28,9 +28,9 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signInWithPopup(auth, provider)
     }
-    const updateName= (userInfo)=>{
+    const updateNameProfile= (profile)=>{
         setLoading(true);
-        return updateProfile(auth.currentUser,userInfo)
+        return updateProfile(auth.currentUser,profile)
     }
   
    useEffect(()=>{
@@ -53,7 +53,7 @@ const getInfo = {
     signIn,
     logOut,
     singInPop,
-    updateName
+    updateNameProfile
 
 
 }

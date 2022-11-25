@@ -2,13 +2,14 @@
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './Routers/Routers/Routers';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className='md:mx-14'>
+    <div data-theme="emerald" className='md:mx-14'>
       <RouterProvider router={router}>
-
       </RouterProvider>
+      <Toaster></Toaster>
     </div>
   );
 }

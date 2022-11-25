@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import LaptopsCard from '../LaptopsCard/LaptopsCard';
+import ProductCategory from '../ProductCategory/ProductCategory';
 
 const AllUsedProducts = () => {
     const {data:laptops =[]} = useQuery({
@@ -12,7 +13,16 @@ const AllUsedProducts = () => {
         }
     })
     return (
-        <div className='grid grid-cols-2 gap-10 my-20'>
+       <div className=''>
+        <div className='mt-12 flex justify-center'>
+            {
+                laptops.map(laptop => <ProductCategory
+                key={laptop._id}
+                laptop={laptop}
+                ></ProductCategory>)
+            }
+        </div>
+        <div className='grid grid-cols-2 gap-10 my-10'>
             {
                 laptops.map(laptop => <LaptopsCard
                 key={laptop._id}
@@ -21,6 +31,7 @@ const AllUsedProducts = () => {
             }
             
         </div>
+       </div>
     );
 };
 

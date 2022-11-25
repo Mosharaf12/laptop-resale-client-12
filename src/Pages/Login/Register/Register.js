@@ -3,12 +3,13 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 const googleProvider = new GoogleAuthProvider();
 
 const Register = () => {
 
-    const{createUser,singInPop}= useContext(AuthContext)
+    const{createUser,singInPop,updateNameProfile}= useContext(AuthContext)
 
 
     const handleSubmitRegister= event=>{
@@ -22,12 +23,31 @@ const Register = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            handleProfile(name)
+            toast.success('Registration successful')
+            
         })
         .catch(err=>{
             console.err(err)
         })
+        
 
     }
+    const handleProfile=(name)=>{
+      const   profile={
+            displayName: name,
+        }
+        updateNameProfile(profile)
+        .then(()=>{
+
+        })
+        .catch((error)=>{
+            console.error(error);
+        })
+
+    }
+
+
     const handleGoogle=()=>{
         singInPop(googleProvider)
         .then(result=>{

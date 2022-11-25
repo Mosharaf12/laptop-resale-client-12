@@ -1,13 +1,28 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
 
 const Header = () => {
+  const {user,logOut} = useContext(AuthContext)
+  const handleLogButton = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.log(error))
+  };
+
   const navItems = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/blog'>Blog</Link></li>
-    <li><Link to='/login'>Login</Link></li>
-    <li><Link to='/register'>Register</Link></li>
+    {
+    user?.uid ?
+        <>
+            <li><button onClick={handleLogButton}>Log Out</button></li>
+
+        </>
+        : <li><Link to='/login'>Login</Link></li>
+}
   </>
+  
     return (
       
         <div className="navbar bg-base-100">
