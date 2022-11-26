@@ -1,6 +1,6 @@
 
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import toast from 'react-hot-toast';
@@ -10,6 +10,7 @@ const googleProvider = new GoogleAuthProvider();
 const Register = () => {
 
     const{createUser,singInPop,updateNameProfile}= useContext(AuthContext)
+    const [error,setError] = useState('')
 
 
     const handleSubmitRegister= event=>{
@@ -25,6 +26,8 @@ const Register = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            setError('')
+            form.reset()
             handleProfile(name)
             toast.success('Registration successful')
             userRole(name,email,role)
@@ -32,7 +35,8 @@ const Register = () => {
  
         })
         .catch(err=>{
-            console.err(err)
+            console.error(err)
+            setError(err.message)
         })
     }
     const handleProfile=(name)=>{
@@ -97,12 +101,12 @@ const Register = () => {
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Email</span></label>
-                    <input name='email' type='email' className="input input-bordered w-full max-w-xs" />
+                    <input name='email' type='email' className="input input-bordered w-full max-w-xs" required />
                 </div>
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Password</span></label>
-                    <input name='password' type='Password' className="input input-bordered w-full max-w-xs mb-5" />
+                    <input name='password' type='Password' className="input input-bordered w-full max-w-xs mb-5" required />
                 </div>
 
                 <div className="form-control w-full max-w-xs mb-6">
@@ -111,10 +115,9 @@ const Register = () => {
                      <option selected>buyer</option>
                      <option>seller</option>
                     </select>
-                    
                 </div>
-
                 <input className='btn btn-accent w-full' type="submit" value='Register'  />
+                { setError && <p className='text-error'>{error}</p> }
             </form>
             <p className='mt-3'>Already have an account<Link to='/login' className='text-primary'> please Login</Link></p>
             <div className="divider">OR</div>
