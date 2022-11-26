@@ -1,7 +1,10 @@
 import { async } from "@firebase/util";
 import { createBrowserRouter } from "react-router-dom";
+import LayoutDashboard from "../../layout/LayoutDashboard";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import AddProduct from "../../Pages/Dashboard/AddProduct/AddProduct";
+import Myorders from "../../Pages/Dashboard/Myorders/Myorders";
 import DetailsCard from "../../Pages/Home/DetailsCard/DetailsCard";
 import FilterByCategorey from "../../Pages/Home/FilterByCategorey/FilterByCategorey";
 import Home from "../../Pages/Home/Home";
@@ -43,6 +46,22 @@ export const router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             },
+        ]
+    },
+    {
+        path:'/dashboard',
+        errorElement: <ErrorPage></ErrorPage>,
+        element: <LayoutDashboard></LayoutDashboard>,
+        children:[
+            {
+                path:'/dashboard',
+                element:<Myorders></Myorders>
+            },
+            {
+                path:'/dashboard/addproduct',
+                element:<AddProduct></AddProduct>
+            },
+         
         ]
     }
 ])
