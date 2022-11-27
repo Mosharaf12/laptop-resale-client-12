@@ -9,8 +9,8 @@ const FilterByCategorey = () => {
    
     return (
         <div>
-            <h2>{laptops.length}</h2>
-           <div className='grid grid-cols-3'>
+           
+           <div className='md:grid grid-cols-3  gap-10 my-12 '>
            {
                 laptops.map(laptop => <LaptopsCard
                 key={laptop._id}

@@ -13,6 +13,7 @@ const LaptopsCard = ({laptop}) => {
             <h3 className='text-xl font-bold text-blue-600'> Price: ৳ {resaleprice} </h3>
             <h3 className='text-xl'> ৳ <s>{originalprice}</s> </h3>
           </div>
+            <p>Location: <span className='text-primary'>{location}</span> </p>
           <div className="card-actions justify-end">
             <Link to={`/laptop/${_id}`}><button className="btn btn-info font-bold text-white">View Details</button></Link>
           </div>

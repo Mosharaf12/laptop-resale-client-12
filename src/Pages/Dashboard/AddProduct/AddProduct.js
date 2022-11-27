@@ -95,9 +95,9 @@ const AddProduct = () => {
                 <div className="form-control w-full">
                     <label className="label"> <span className="label-text">Categorey</span></label>
                     <select required name='categorey' className="select select-bordered w-full"> 
-                         <option>Dell</option>
-                         <option>Lenovo</option>
-                         <option>Acer</option>
+                         <option value='Dell'>Dell</option>
+                         <option value='Lenovo'>Lenovo</option>
+                         <option value='Acer'>Acer</option>
                     </select>
                 </div>
                </div>
