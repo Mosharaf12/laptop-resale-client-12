@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import {  useLoaderData } from 'react-router-dom';
 import { FaCheck } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider';
+import { useQuery } from '@tanstack/react-query';
 
 const DetailsCard = () => {
 	const {user} = useContext(AuthContext)
@@ -29,9 +30,19 @@ const DetailsCard = () => {
             location,
             resaleprice,
             originalprice,
-		}	
-		console.log(booking)	
 
+		}	
+		fetch(`http://localhost:5000/booking`,{
+			method: "POST",
+			headers:{
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(booking)	
+		})
+		.then(res=> res.json())
+		.then(data=>{
+			console.log(data);
+		})
 	};
     return (
       <section className="text-gray-800">

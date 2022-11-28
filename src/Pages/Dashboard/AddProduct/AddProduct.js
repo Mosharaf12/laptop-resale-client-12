@@ -4,7 +4,6 @@ import { AuthContext } from '../../../Context/AuthProvider';
 
 const AddProduct = () => {
 
-    const permission = window.confirm('sure to add this product?')
     const {user} = useContext(AuthContext)
     const imageHostingKey = process.env.REACT_APP_imgbb_key;
 
@@ -20,6 +19,7 @@ const AddProduct = () => {
         const yearsofuse = form.yearsofuse.value;
         const description = form.description.value;
         const categorey = form.categorey.value;
+        const condition = form.condition.value;
         // console.log(brandname,image,sellername,location,resalerprice,originalprice,yearsofuse,description,categorey);
 
         
@@ -48,8 +48,9 @@ const AddProduct = () => {
                     categorey,
                     description,
                     user: user.email,
+                    condition
                 }
-                if(permission){
+               
                     fetch(`http://localhost:5000/usedlaptop`,{
                         method: "POST",
                         headers:{
@@ -61,7 +62,7 @@ const AddProduct = () => {
                     .then(data=> {
                         console.log(data)
                     })
-                }
+                
             }
 
         })
@@ -98,6 +99,14 @@ const AddProduct = () => {
                          <option value='Dell'>Dell</option>
                          <option value='Lenovo'>Lenovo</option>
                          <option value='Acer'>Acer</option>
+                    </select>
+                </div>
+                <div className="form-control w-full">
+                    <label className="label"> <span className="label-text">condition</span></label>
+                    <select required name='condition' className="select select-bordered w-full"> 
+                         <option>Excellent</option>
+                         <option>Good</option>
+                         <option>Fair</option>
                     </select>
                 </div>
                </div>

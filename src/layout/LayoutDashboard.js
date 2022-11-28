@@ -18,6 +18,8 @@ const LayoutDashboard = () => {
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
           <li><Link to='/dashboard'>My orders</Link></li>
           <li><Link to='/dashboard/addproduct'>Add product</Link></li>
+          <li><Link to='/dashboard/myproduct'>My Product</Link></li>
+         
           </ul>
         </div>
       </div>

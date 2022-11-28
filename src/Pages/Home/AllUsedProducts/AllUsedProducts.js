@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LaptopsCard from '../LaptopsCard/LaptopsCard';
-import ProductCategory from '../ProductCategory/ProductCategory';
+
 
 const AllUsedProducts = () => {
     const {data:laptops =[]} = useQuery({
