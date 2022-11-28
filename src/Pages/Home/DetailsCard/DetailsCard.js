@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react';
 import {  useLoaderData } from 'react-router-dom';
 import { FaCheck } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider';
-import { useQuery } from '@tanstack/react-query';
+import {  useNavigate } from 'react-router-dom';
 
 const DetailsCard = () => {
 	const {user} = useContext(AuthContext)
+    const navigate = useNavigate();
 	console.log(user);
 	const [productData, setProductData] = useState(null)
 	
@@ -41,7 +42,9 @@ const DetailsCard = () => {
 		})
 		.then(res=> res.json())
 		.then(data=>{
-			console.log(data);
+			console.log(data)
+            navigate('/dashboard')
+
 		})
 	};
     return (
@@ -65,6 +68,8 @@ const DetailsCard = () => {
 				<h2 className='text-xl text-secondary mr-2'>seller name: {sellername} </h2>  <FaCheck className='text-blue-600'></FaCheck>
 			</div>
             <label htmlFor='booking-modal' className="btn btn-info font-bold text-whit mt-3">Book Now!</label>
+
+
 			<div>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
             <div className="modal">
@@ -83,11 +88,12 @@ const DetailsCard = () => {
                         {
                             !user && <p>Please login</p>
                         }
-                        <input type="submit" value='Submit' className={user ?
-                            "btn btn-accent w-full"
+                       <input htmlFor="booking-modal" type="submit" value='Submit' className={user ?
+                            "btn btn-secondary w-full"
                             :
                             "btn btn-accent w-full btn-disabled"
-                        } />
+                        } > 
+                        </input>
                     </form>
                 </div>
             </div>
