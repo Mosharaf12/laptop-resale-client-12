@@ -1,7 +1,27 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 const MyProductTable = ({ myproduct }) => {
   const { name, picture, resaleprice, _id } = myproduct;
+
+  const handleDeleteItem = id =>{
+    const getPermission = window.confirm('Are you sure want to delete this product?')
+  if(getPermission){
+    fetch(`http://localhost:5000/myproduct?id=${id}`,{
+      method: "DELETE",
+
+    })
+    .then(res=> res.json())
+    .then(data=> {
+      if(data.deletedCount > 0){
+        console.log(data);
+        toast.success('deleted success')
+      }
+
+    })
+  }
+
+  }
 
   return (
     <tr className="hover">
@@ -15,7 +35,7 @@ const MyProductTable = ({ myproduct }) => {
       <td>{name}</td>
       <td>{resaleprice}</td>
       <td>
-        <button className="btn btn-error btn-md">Delete</button>
+        <button onClick={()=> handleDeleteItem(_id)} className="btn btn-error btn-md">Delete</button>
       </td>
     </tr>
   );

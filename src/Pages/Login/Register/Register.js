@@ -1,7 +1,7 @@
 
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext,useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
@@ -11,6 +11,7 @@ const Register = () => {
 
     const{createUser,singInPop,updateNameProfile}= useContext(AuthContext)
     const [error,setError] = useState('')
+    const navigate = useNavigate()
 
 
     const handleSubmitRegister= event=>{
@@ -31,6 +32,7 @@ const Register = () => {
             handleProfile(name)
             toast.success('Registration successful')
             userRole(name,email,role)
+            navigate('/');
 
  
         })
@@ -61,6 +63,7 @@ const Register = () => {
             console.log(user);
             const role = 'buyer'
             userRole(user.displayName,user.email, role)
+            navigate('/')
 
         })
         .catch(err=>{

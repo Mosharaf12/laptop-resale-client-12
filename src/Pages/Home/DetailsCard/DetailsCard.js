@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState,useEffect } from 'react';
 import {  useLoaderData } from 'react-router-dom';
 import { FaCheck } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider';
@@ -11,10 +11,9 @@ const DetailsCard = () => {
 	const [productData, setProductData] = useState(null)
 	
     const detailsCard = useLoaderData()
-    const {_id,picture,description,name,location,resaleprice,sellername,originalprice,yearsofuse}= detailsCard;
+    const {_id, useremail ,date,picture,description,name,location,resaleprice,sellername,originalprice,yearsofuse}= detailsCard;
 
-
-	
+    
     const handleProductBooking = e => {
         e.preventDefault();
         const form = e.target;
@@ -47,6 +46,18 @@ const DetailsCard = () => {
 
 		})
 	};
+
+    const [bluetic, setBluetic] = useState(null)
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/users/${useremail}`)
+        .then(res=> res.json())
+        .then(data=> {
+            setBluetic(data)
+            console.log(data)
+        })
+    },[useremail])
+
     return (
       <section className="text-gray-800">
 	<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
@@ -62,10 +73,18 @@ const DetailsCard = () => {
 				<h4> ৳<s>{originalprice}</s> </h4>
 
 			</div>
-				<p>Used time: {yearsofuse} year</p>
+            <p>Date: {date}</p>
+			<p>Used time: {yearsofuse} year</p>
 			<p>Location: <span className='text-primary'>{location}</span> </p>
 			<div className='p-3 shadow-xl md:flex items-center'>
-				<h2 className='text-xl text-secondary mr-2'>seller name: {sellername} </h2>  <FaCheck className='text-blue-600'></FaCheck>
+				<h2 className='text-xl text-secondary mr-2'>seller name: {sellername} </h2>
+                  {
+                    bluetic?.map(blue=> <>
+                    {
+                        blue.email === useremail && blue.verified && <FaCheck className='text-blue-600'></FaCheck>
+                    }
+                    </>) 
+                  }
 			</div>
             <label htmlFor='booking-modal' className="btn btn-info font-bold text-whit mt-3">Book Now!</label>
 

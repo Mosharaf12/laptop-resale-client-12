@@ -8,16 +8,20 @@ const MyProduct = () => {
     const {user} =useContext(AuthContext)
     console.log(user);
 
-    const {data:myproducts =[] ,refetch} = useQuery({
-        queryKey:['myprodusts'],
+    const {data: myproducts = [] ,refetch, isLoading} = useQuery({
+        queryKey:['myproducts'],
         queryFn: async()=>{
             const res = await fetch(`http://localhost:5000/myproduct?email=${user?.email}`)
             const data = await res.json()
+            console.log(data);
             return data;
         }
 
     })
     refetch();
+    if(isLoading){
+      return <p className='text-5xl'>Loading....</p>
+    }
     
     return (
 
@@ -36,7 +40,7 @@ const MyProduct = () => {
     </thead>
     <tbody>
         {
-            myproducts.map(myproduct=> <MyProductTable
+            myproducts?.map(myproduct=> <MyProductTable
             key={myproduct._id}
             myproduct={myproduct}
 

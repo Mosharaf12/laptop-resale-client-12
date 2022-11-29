@@ -5,32 +5,21 @@ import { AuthContext } from '../../../Context/AuthProvider';
 import MyOrderTable from './MyOrderTable';
 
 const Myorders = () => {
-
     const {user} = useContext(AuthContext)
-    console.log('user',user.email)
 
-    const {data:myorders =[], refetch} = useQuery({
+    const {data: myorders = [], refetch , isLoading} = useQuery({
         queryKey:['myorders'],
         queryFn: async()=>{
-            const res = await fetch(`http://localhost:5000/booking?email=${user.email}`);
+            const res = await fetch(`http://localhost:5000/booking?email=${user?.email}`);
             const data = await res.json();
             return data;
         }
     });
     refetch();
-
-    // useEffect(()=>{
-    //     fetch(`http://localhost:5000/booking?email=${user?.email}`)
-    //     .then(res=> res.json())
-    //     .then(data=>{
-    //         console.log(data)
-    //         if(loading){
-    //             return <progress className="progress w-56"></progress>
-    //         }
-    //     })
-    // },[user?.email,loading])
-
-
+    if(isLoading){
+      return <h1 className='text-6xl'>Loading....</h1>
+    }
+    
     return (
         <div>
              <h1>booking:{myorders.length}</h1>

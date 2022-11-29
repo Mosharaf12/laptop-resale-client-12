@@ -1,11 +1,21 @@
 
 import React,{useContext} from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const AddProduct = () => {
 
     const {user} = useContext(AuthContext)
+    const navigate = useNavigate();
     const imageHostingKey = process.env.REACT_APP_imgbb_key;
+
+    const currentdate = new Date();
+    const date = currentdate.toLocaleDateString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    console.log(date);
 
     const handleSubmit=event=>{
         event.preventDefault()
@@ -47,8 +57,9 @@ const AddProduct = () => {
                     yearsofuse,
                     categorey,
                     description,
-                    user: user.email,
-                    condition
+                    useremail: user.email,
+                    condition,
+                    date
                 }
                
                     fetch(`http://localhost:5000/usedlaptop`,{
@@ -60,7 +71,9 @@ const AddProduct = () => {
                     })
                     .then(res=> res.json())
                     .then(data=> {
-                        console.log(data)
+                        toast.success('product added')
+                        navigate('/dashboard/myproduct')
+
                     })
                 
             }
@@ -87,7 +100,7 @@ const AddProduct = () => {
                 </div>
                 <div className="form-control w-full">
                     <label className="label"> <span className="label-text">SellerName</span></label>
-                    <input name='sellername' type='text' className="input input-bordered w-full" required/>
+                    <input disabled defaultValue={user?.displayName} name='sellername' type='text' className="input input-bordered w-full" required/>
                 </div>
                 <div className="form-control w-full">
                     <label className="label"> <span className="label-text">Location</span></label>

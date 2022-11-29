@@ -4,14 +4,18 @@ import LayoutDashboard from "../../layout/LayoutDashboard";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import AddProduct from "../../Pages/Dashboard/AddProduct/AddProduct";
+import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Myorders from "../../Pages/Dashboard/Myorders/Myorders";
 import MyProduct from "../../Pages/Dashboard/MyProduct/MyProduct";
+import ReportedProduct from "../../Pages/Dashboard/ReportedProduct/ReportedProduct";
 import DetailsCard from "../../Pages/Home/DetailsCard/DetailsCard";
 import FilterByCategorey from "../../Pages/Home/FilterByCategorey/FilterByCategorey";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
 import ErrorPage from "../../Shared/ErrorPage";
+import AdminRoute from "../AdminRoute/AdminRoute";
+import SellerRoute from "./SellerRoute";
 
 
 
@@ -60,12 +64,21 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/dashboard/addproduct',
-                element:<AddProduct></AddProduct>
+                element: <AddProduct></AddProduct>
             },
             {
                 path:'/dashboard/myproduct',
                 element:<MyProduct></MyProduct>
             },
+            {
+                path:'/dashboard/allusers',
+                element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path:'/dashboard/reported',
+                element:<AdminRoute><ReportedProduct></ReportedProduct></AdminRoute>
+            },
+          
          
         ]
     }
