@@ -134,6 +134,10 @@ const AddProduct = () => {
                     <input name='originalprice' type='text' className="input input-bordered w-full" required/>
                 </div>
                 <div className="form-control w-full">
+                    <label className="label"> <span className="label-text">Email</span></label>
+                    <input disabled defaultValue={user.email} name='email' type='email' className="input input-bordered w-full"/>
+                </div>
+                <div className="form-control w-full">
                     <label className="label"> <span className="label-text">Years of Use</span></label>
                     <input name='yearsofuse' type='text' className="input input-bordered w-full" required />
                 </div>
