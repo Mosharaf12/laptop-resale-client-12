@@ -13,6 +13,7 @@ const Header = () => {
   const navItems = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/blog'>Blog</NavLink></li>
+    <li><NavLink to='/advertising'>Advertised Items</NavLink></li>
     {
     user?.uid ?
         <>

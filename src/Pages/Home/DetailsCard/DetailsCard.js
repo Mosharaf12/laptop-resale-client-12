@@ -3,15 +3,16 @@ import {  useLoaderData } from 'react-router-dom';
 import { FaCheck } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider';
 import {  useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const DetailsCard = () => {
 	const {user} = useContext(AuthContext)
     const navigate = useNavigate();
-	console.log(user);
+	
 	const [productData, setProductData] = useState(null)
 	
     const detailsCard = useLoaderData()
-    const {_id, useremail ,date,picture,description,name,location,resaleprice,sellername,originalprice,yearsofuse}= detailsCard;
+    const {_id,report, useremail ,date,picture,description,name,location,resaleprice,sellername,originalprice,yearsofuse}= detailsCard;
 
     
     const handleProductBooking = e => {
@@ -47,16 +48,36 @@ const DetailsCard = () => {
 		})
 	};
 
+    const handleReported = (id) =>{
+          console.log(id)
+        const permission = window.confirm(`Are you report ${name}`);
+        if(permission){
+          fetch(`http://localhost:5000/usedLaptop?id=${id}`, {
+            method: "PUT"
+          })
+          .then(res => res.json())
+          .then(data => {
+            if(data.modifiedCount > 0){
+              toast.success('Product reported')
+              console.log(data);
+              
+            }
+          })
+        }
+
+    }
+
     const [bluetic, setBluetic] = useState(null)
 
+
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/${useremail}`)
+        fetch(`http://localhost:5000/users`)
         .then(res=> res.json())
         .then(data=> {
             setBluetic(data)
-            console.log(data)
+            
         })
-    },[useremail])
+    },[bluetic])
 
     return (
       <section className="text-gray-800">
@@ -76,8 +97,9 @@ const DetailsCard = () => {
             <p>Date: {date}</p>
 			<p>Used time: {yearsofuse} year</p>
 			<p>Location: <span className='text-primary'>{location}</span> </p>
-			<div className='p-3 shadow-xl md:flex items-center'>
-				<h2 className='text-xl text-secondary mr-2'>seller name: {sellername} </h2>
+			<div className='p-3 shadow-xl md:flex items-center justify-between'>
+			<div>
+            <h2 className='text-xl text-secondary mr-2'>seller name: {sellername} </h2>
                   {
                     bluetic?.map(blue=> <>
                     {
@@ -85,7 +107,18 @@ const DetailsCard = () => {
                     }
                     </>) 
                   }
+            </div>
+                 <div className=''>
+               {
+                report?
+                <button disabled className='btn btn-error btn-sm text-white w-32'>Report</button>
+                :
+                <button onClick={()=>handleReported(_id)} className='btn btn-error btn-sm text-white w-32'>Report</button>
+               }
+                 </div>
 			</div>
+
+
             <label htmlFor='booking-modal' className="btn btn-info font-bold text-whit mt-3">Book Now!</label>
 
 

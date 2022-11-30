@@ -13,7 +13,6 @@ const MyProduct = () => {
         queryFn: async()=>{
             const res = await fetch(`http://localhost:5000/myproduct?email=${user?.email}`)
             const data = await res.json()
-            console.log(data);
             return data;
         }
 
@@ -36,6 +35,7 @@ const MyProduct = () => {
         <th>Brand Name</th>
         <th>Price</th>
         <th>Remove</th>
+        <th>Advertised</th>
       </tr>
     </thead>
     <tbody>
