@@ -11,7 +11,7 @@ const MyProduct = () => {
     const {data: myproducts = [] ,refetch, isLoading} = useQuery({
         queryKey:['myproducts'],
         queryFn: async()=>{
-            const res = await fetch(`http://localhost:5000/myproduct?email=${user?.email}`)
+            const res = await fetch(`https://resale-market-server-kappa.vercel.app/myproduct?email=${user?.email}`)
             const data = await res.json()
             return data;
         }

@@ -10,7 +10,7 @@ const MyOrderTable = ({ myorder }) => {
 
   const handleRemoveItem = (id)=>{
 
-      fetch(`http://localhost:5000/booking?id=${id}`, {
+      fetch(`https://resale-market-server-kappa.vercel.app/booking?id=${id}`, {
         method: "DELETE"
       })
       .then(res => res.json())

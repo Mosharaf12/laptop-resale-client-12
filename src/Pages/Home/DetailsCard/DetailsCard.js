@@ -33,7 +33,7 @@ const DetailsCard = () => {
             originalprice,
 
 		}	
-		fetch(`http://localhost:5000/booking`,{
+		fetch(`https://resale-market-server-kappa.vercel.app/booking`,{
 			method: "POST",
 			headers:{
 				'content-type': 'application/json'
@@ -52,7 +52,7 @@ const DetailsCard = () => {
           console.log(id)
         const permission = window.confirm(`Are you report ${name}`);
         if(permission){
-          fetch(`http://localhost:5000/usedLaptop?id=${id}`, {
+          fetch(`https://resale-market-server-kappa.vercel.app/usedLaptop?id=${id}`, {
             method: "PUT"
           })
           .then(res => res.json())
@@ -71,7 +71,7 @@ const DetailsCard = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/users`)
+        fetch(`https://resale-market-server-kappa.vercel.app/users`)
         .then(res=> res.json())
         .then(data=> {
             setBluetic(data)

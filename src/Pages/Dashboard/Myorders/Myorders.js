@@ -10,7 +10,7 @@ const Myorders = () => {
     const {data: myorders = [], refetch , isLoading} = useQuery({
         queryKey:['myorders'],
         queryFn: async()=>{
-            const res = await fetch(`http://localhost:5000/booking?email=${user?.email}`);
+            const res = await fetch(`https://resale-market-server-kappa.vercel.app/booking?email=${user?.email}`);
             const data = await res.json();
             return data;
         }

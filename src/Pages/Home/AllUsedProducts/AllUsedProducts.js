@@ -8,7 +8,7 @@ const AllUsedProducts = () => {
     const {data:laptops =[]} = useQuery({
         queryKey:['laptops'],
         queryFn: async()=>{
-            const res = await fetch('http://localhost:5000/usedLaptop')
+            const res = await fetch('https://resale-market-server-kappa.vercel.app/usedLaptop')
             const data = await res.json()
             return data;
         }

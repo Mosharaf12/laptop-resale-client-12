@@ -6,7 +6,7 @@ const ReportedProduct = () => {
     const {data: allReporteds = [], refetch, isLoading} = useQuery({
         queryKey: ['allReporteds'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allReported`);
+            const res = await fetch(`https://resale-market-server-kappa.vercel.app/allReported`);
             const data = await res.json();
             return data;
         }

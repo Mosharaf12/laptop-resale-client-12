@@ -8,7 +8,7 @@ const MyProductTable = ({ myproduct }) => {
   const handleDeleteItem = id =>{
     const getPermission = window.confirm('Are you sure want to delete this product?')
   if(getPermission){
-    fetch(`http://localhost:5000/myproduct?id=${id}`,{
+    fetch(`https://resale-market-server-kappa.vercel.app/myproduct?id=${id}`,{
       method: "DELETE",
 
     })
@@ -25,7 +25,7 @@ const MyProductTable = ({ myproduct }) => {
   }
 
   const handleAdvertising = (id) => {
-        fetch(`http://localhost:5000/myproduct?id=${id}`, {
+        fetch(`https://resale-market-server-kappa.vercel.app/myproduct?id=${id}`, {
             method: "PUT"
         })
         .then(res => res.json())

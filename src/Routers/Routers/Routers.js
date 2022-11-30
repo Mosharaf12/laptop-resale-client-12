@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/usedLaptop/:categorey',
-                loader:async({params})=> await fetch(`http://localhost:5000/usedLaptop/${params.categorey}`),
+                loader:async({params})=> await fetch(`https://resale-market-server-kappa.vercel.app/usedLaptop/${params.categorey}`),
                 element: <FilterByCategorey></FilterByCategorey>
             },
             {
@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/laptop/:id',
-                loader: async({params})=> fetch(`http://localhost:5000/laptop/${params.id}`),
+                loader: async({params})=> fetch(`https://resale-market-server-kappa.vercel.app/laptop/${params.id}`),
                 element: <DetailsCard></DetailsCard>
             },
             {

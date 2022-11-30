@@ -74,7 +74,7 @@ const Register = () => {
     const userRole =(name,email,role)=>{
         const user = {name, email, role}
         console.log(name,email, role)
-        fetch(`http://localhost:5000/users`,{
+        fetch(`https://resale-market-server-kappa.vercel.app/users`,{
             method: "POST",
             headers:{
                 'content-type':'application/json'

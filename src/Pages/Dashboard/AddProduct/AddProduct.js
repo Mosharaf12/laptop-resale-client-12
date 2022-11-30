@@ -62,7 +62,7 @@ const AddProduct = () => {
                     date
                 }
                
-                    fetch(`http://localhost:5000/usedlaptop`,{
+                    fetch(`https://resale-market-server-kappa.vercel.app/usedlaptop`,{
                         method: "POST",
                         headers:{
                             'content-type': 'application/json'

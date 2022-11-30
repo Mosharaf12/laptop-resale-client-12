@@ -6,7 +6,7 @@ const Advertising = () => {
     const {data: advertisings = [] , refetch , isLoading} = useQuery({
         queryKey: ['advertisings'],
         queryFn:async()=>{
-            const res = await fetch(`http://localhost:5000/advertisingProduct`)
+            const res = await fetch(`https://resale-market-server-kappa.vercel.app/advertisingProduct`)
             const data = await res.json()
             return data;
         }

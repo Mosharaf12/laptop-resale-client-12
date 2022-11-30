@@ -7,7 +7,7 @@ const AllUsers = () => {
     const {data: users = []} = useQuery({
         queryKey: ['users'],
         queryFn: async()=>{
-            const res = await fetch(`http://localhost:5000/users`)
+            const res = await fetch(`https://resale-market-server-kappa.vercel.app/users`)
             const data = await res.json()
             return data;
         }
@@ -16,7 +16,7 @@ const AllUsers = () => {
         console.log(id)
         const userPermission = window.confirm('Are you delete this users?');
         if(userPermission){
-            fetch(`http://localhost:5000/users?id=${id}`,{
+            fetch(`https://resale-market-server-kappa.vercel.app/users?id=${id}`,{
                 method: "DELETE"
 
             })
@@ -34,7 +34,7 @@ const AllUsers = () => {
     const handleVerifyUser=(id)=>{
        const getPermission = window.confirm('Do you want to verify?');
        if(getPermission){
-        fetch(`http://localhost:5000/users?id=${id}`,{
+        fetch(`https://resale-market-server-kappa.vercel.app/users?id=${id}`,{
             method: "PUT"
         })
         .then(res=> res.json())
