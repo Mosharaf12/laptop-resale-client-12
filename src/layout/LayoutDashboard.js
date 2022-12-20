@@ -14,6 +14,7 @@ const LayoutDashboard = () => {
   return (
     <div>
           <Header> </Header>
+      <div className="pt-24">
       <div className="drawer drawer-mobile">
         <input id="laptop-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
@@ -41,6 +42,7 @@ const LayoutDashboard = () => {
          
           </ul>
         </div>
+      </div>
       </div>
    
     </div>
