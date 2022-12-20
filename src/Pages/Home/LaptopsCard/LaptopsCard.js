@@ -8,7 +8,7 @@ const LaptopsCard = ({laptop}) => {
         <figure><img className='w-full' style={{width: "580px", height: "270px"}} src={picture} alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
-          <p>{description.slice(0,100)}...</p>
+          <p>{description?.slice(0,100)}...</p>
           <div className='flex justify-between'>
             <h3 className='text-xl font-bold text-blue-600'> Price: ৳ {resaleprice} </h3>
             <h3 className='text-xl'> ৳ <s>{originalprice}</s> </h3>

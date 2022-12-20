@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <section className="text-gray-800 my-12">
-        <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+        <section className="text-gray-800 py-24 ">
+        <div className="container rounded-xl bg-base-200 flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
             <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Question About Programming </h2>
             <div className="divide-y divide-gray-300">
                 <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">

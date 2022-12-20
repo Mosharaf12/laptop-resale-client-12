@@ -1,6 +1,7 @@
 import React,{useContext} from 'react';
 import { NavLink,Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import logo from '../assests/footer images/footerimages.png'
 
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
@@ -27,7 +28,7 @@ const Header = () => {
   
     return (
       
-        <div className="navbar bg-base-100">
+        <div className="navbar glass z-10 rounded-b-xl fixed max-w-[1240px]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -37,7 +38,12 @@ const Header = () => {
        {navItems}
       </ul>
     </div>
-    <Link to='/' className="btn btn-ghost normal-case text-xl">Laptop Resale Market</Link>
+    <div className='flex items-center'>
+    <img width="60" height="60" src={logo} alt="" />
+
+    <Link to='/' className="btn btn-ghost normal-case text-xl font-semibold">Laptop Market</Link>
+    </div>
+
   </div>
  
  

@@ -3,11 +3,11 @@ import logo from '../assests/footer images/footerimages.png'
 
 const Footer1 = () => {
     return (
-        <footer className="footer footer-center p-10 bg-base-200 text-base-content">
+        <footer className="footer rounded-t-xl footer-center p-10 bg-blue-100 text-base-content">
   <div>
   <img width="100" height="100" src={logo} alt="" />
-    <p className='text-xl font-bold'>Laptop Resale Market</p>
-    <p>Copyright © 2022 - All right reserved by Laptop Resale Market</p>
+    <p className='text-xl font-bold'>Laptop Market</p>
+    <p>Copyright © 2022 - All right reserved by Laptop Market</p>
   </div> 
   <div>
     <div className="grid grid-flow-col gap-4">

@@ -1,17 +1,22 @@
 import React from 'react';
-import banner1 from '../../../assests/images/banner/laptopbanner1.jpg'
+import banner1 from '../../../assests/images/banner/laptopbanner1.png'
 import banner2 from '../../../assests/images/banner/laptopbanner2.jpg'
 import banner3 from '../../../assests/images/banner/laptopbanner3.jpg'
 
 const Banner = () => {
     return (
-        <div>
-          <div className="carousel w-full h-[530px] rounded-xl">
+        <div className='pt-24'>
+          <div className="carousel w-full h-[560px] rounded-xl ">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={banner1} alt="" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
+    <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
+      <a href="#slide4" className="btn btn-circle bg-green-500 mr-8">❮</a> 
+      <a href="#slide2" className="btn btn-circle ">❯</a>
+    </div>
+      <div className='absolute  left-36 top-1/2'>
+        <h2 className='text-5xl text-black font-bold'>LAPTOP MARKET</h2>
+        <p className='text-3xl text-white font-semibold'>In the middle of every difficulty <br /> lies opportunity</p>
+
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">

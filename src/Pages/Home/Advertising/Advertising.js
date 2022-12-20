@@ -18,7 +18,7 @@ const Advertising = () => {
     return (
         <div>
             <h2>Advertising</h2>
-           <div className='grid md:grid-cols-3 gap-10 grid-cols-1 '>
+           <div className='grid md:grid-cols-3 gap-10 grid-cols-1  py-24 '>
            {
                 advertisings.map(advertis=> <LaptopsCard
                 key={advertis._id}
