@@ -12,17 +12,17 @@ const Header = () => {
   };
 
   const navItems = <>
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/blog'>Blog</NavLink></li>
-    <li><NavLink to='/advertising'>Advertised Items</NavLink></li>
+    <li><NavLink className='font-semibold' to='/'>HOME</NavLink></li>
+    <li><NavLink className='font-semibold' to='/blog'>BLOG</NavLink></li>
+    <li><NavLink className='font-semibold' to='/advertising'>ADVERTISED ITEMS</NavLink></li>
     {
     user?.uid ?
         <>
-            <li><Link to='/dashboard'><button>Dashboard</button></Link></li>
-            <li><button onClick={handleLogButton}>Log Out</button></li>
+            <li><Link className='font-semibold' to='/dashboard'><button>DASHBOARD</button></Link></li>
+            <li><button onClick={handleLogButton}>LOG OUT</button></li>
 
         </>
-        : <li><NavLink to='/login'>Login</NavLink></li>
+        : <li><NavLink className='font-semibold' to='/login'>LOGIN</NavLink></li>
 }
   </>
   
@@ -41,7 +41,7 @@ const Header = () => {
     <div className='flex items-center'>
     <img width="60" height="60" src={logo} alt="" />
 
-    <Link to='/' className="btn btn-ghost normal-case text-xl font-semibold">Laptop Market</Link>
+    <Link to='/' className="btn btn-ghost normal-case text-xl font-semibold">LAPTOP MARKET</Link>
     </div>
 
   </div>

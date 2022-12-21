@@ -17,7 +17,7 @@ const AllUsedProducts = () => {
 
     return (
        <div className=''>
-        <div className='mt-12 flex justify-center'>
+        <div className='my-5 flex justify-start'>
         <Link to={`/usedlaptop/Dell`}>
             <button className='btn btn-secondary mr-5  md:px-10'>Dell</button>
       </Link>
