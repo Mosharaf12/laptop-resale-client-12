@@ -12,7 +12,7 @@ const LaptopsCard = ({laptop}) => {
 
 		<div className="flex flex-wrap items-center pt-3 pb-1">
     <h2 className="card-title text-black">{name}</h2>
-          <p>{description?.slice(0,100)}...</p>
+          <p>{description?.slice(0,70)}...</p>
 		</div>
 		<div className="space-y-3">
     <div className='flex justify-between'>
