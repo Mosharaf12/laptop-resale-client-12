@@ -24,8 +24,8 @@ const LaptopsCard = ({laptop}) => {
             <p>Use: {yearsofuse} Years</p>
           </div>
          
-          <div className="card-actions">
-            <Link to={`/laptop/${_id}`}><button className="btn bg-green-500 border-none font-bold text-white">View Details</button></Link>
+          <div className="">
+            <Link className="btn bg-green-500 border-none font-bold text-white w-full"to={`/laptop/${_id}`}>View Details</Link>
           </div>
 		</div>
 	</div>

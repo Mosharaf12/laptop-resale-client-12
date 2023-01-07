@@ -2,6 +2,7 @@ import React,{useContext} from 'react';
 import { NavLink,Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import logo from '../assests/footer images/footerimages.png'
+import ScrollToTop from '../Pages/ScrollToTop';
 
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
@@ -11,7 +12,7 @@ const Header = () => {
         .catch(error => console.log(error))
   };
 
-  const navItems = <>
+  const navItems = <ScrollToTop>
     <li><NavLink className='font-semibold' to='/'>HOME</NavLink></li>
     <li><NavLink className='font-semibold' to='/blog'>BLOG</NavLink></li>
     <li><NavLink className='font-semibold' to='/about'>ABOUT</NavLink></li>
@@ -26,7 +27,7 @@ const Header = () => {
         </>
         : <li><NavLink className='font-semibold' to='/login'>LOGIN</NavLink></li>
 }
-  </>
+</ScrollToTop>
   
     return (
       

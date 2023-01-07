@@ -79,19 +79,26 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/dashboard/addproduct',
-                element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+                element: <AddProduct></AddProduct>
             },
+            // {
+            //     path:'/dashboard/addproduct',
+            //     element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+            // },
             {
                 path:'/dashboard/myproduct',
-                element:<SellerRoute><MyProduct></MyProduct></SellerRoute>
+                element:<MyProduct></MyProduct>
+                // element:<SellerRoute><MyProduct></MyProduct></SellerRoute>
             },
             {
                 path:'/dashboard/allusers',
-                element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+                element:<AllUsers></AllUsers>
+                // element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
             {
                 path:'/dashboard/reported',
-                element:<AdminRoute><ReportedProduct></ReportedProduct></AdminRoute>
+                element:<ReportedProduct></ReportedProduct>
+                // element:<AdminRoute><ReportedProduct></ReportedProduct></AdminRoute>
             },
           
          
