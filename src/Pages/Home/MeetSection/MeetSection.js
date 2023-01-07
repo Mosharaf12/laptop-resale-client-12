@@ -11,8 +11,8 @@ const MeetSection = () => {
 			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
 				<img alt="" className="hover:scale-125 ease-liner duration-200 self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?0" />
 				<div className="flex-1 my-4">
-					<p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-					<p>Visual Designer</p>
+					<p className="text-xl font-semibold leading-snug">Harry</p>
+					<p>Front-End Developer</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
 					<a rel="noopener noreferrer" href="#" title="Email" className="text-gray-50 hover:text-violet-600">
@@ -41,8 +41,8 @@ const MeetSection = () => {
 			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
 				<img alt="" className="hover:scale-125 ease-liner duration-200 self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?1" />
 				<div className="flex-1 my-4">
-					<p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-					<p>Visual Designer</p>
+					<p className="text-xl font-semibold leading-snug">Jerry</p>
+					<p>Back-End Developer</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
 					<a rel="noopener noreferrer" href="#" title="Email" className="text-gray-50 hover:text-violet-600">
@@ -71,8 +71,8 @@ const MeetSection = () => {
 			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
 				<img alt="" className="hover:scale-125 ease-liner duration-200 self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?2" />
 				<div className="flex-1 my-4">
-					<p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-					<p>Visual Designer</p>
+					<p className="text-xl font-semibold leading-snug">Peter</p>
+					<p>Web Design Developer</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
 					<a rel="noopener noreferrer" href="#" title="Email" className="text-gray-50 hover:text-violet-600">

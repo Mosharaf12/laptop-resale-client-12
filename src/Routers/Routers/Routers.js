@@ -8,7 +8,9 @@ import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Myorders from "../../Pages/Dashboard/Myorders/Myorders";
 import MyProduct from "../../Pages/Dashboard/MyProduct/MyProduct";
 import ReportedProduct from "../../Pages/Dashboard/ReportedProduct/ReportedProduct";
+import About from "../../Pages/Home/About";
 import Advertising from "../../Pages/Home/Advertising/Advertising";
+import Contact from "../../Pages/Home/Contact";
 import DetailsCard from "../../Pages/Home/DetailsCard/DetailsCard";
 import FilterByCategorey from "../../Pages/Home/FilterByCategorey/FilterByCategorey";
 import Home from "../../Pages/Home/Home";
@@ -55,6 +57,14 @@ export const router = createBrowserRouter([
             {
                 path: '/advertising',
                 element: <Advertising></Advertising>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
+            },
+            {
+                path: '/about',
+                element: <About></About>
             },
         ]
     },

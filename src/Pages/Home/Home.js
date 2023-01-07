@@ -11,9 +11,13 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <AllUsedProducts></AllUsedProducts>
+           <div className='max-w-[1240px] mx-auto'>
+           <AllUsedProducts></AllUsedProducts>
+           </div>
             <LaptopSection></LaptopSection>
-            <GallerySection></GallerySection>
+           <div className='max-w-[1240px] mx-auto'>
+           <GallerySection></GallerySection>
+           </div>
             <MeetSection></MeetSection>
         </div>
     );

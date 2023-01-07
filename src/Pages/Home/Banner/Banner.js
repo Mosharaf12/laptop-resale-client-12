@@ -7,8 +7,8 @@ import './Banner.css'
 const Banner = () => {
     return (
       <>
-        <div className='pt-24'>
-          <div className="carousel w-full h-[560px] rounded-xl ">
+        <div className='pt-20'>
+          <div className="carousel w-full h-[800px]">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={banner1} alt="" className="w-full bannerimg" />
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
@@ -17,7 +17,7 @@ const Banner = () => {
     </div>
       <div className='absolute  left-3 md:left-36 top-1/2'>
         <h2 className='text-5xl text-white font-bold'>LAPTOP MARKET</h2>
-        <p className='text-3xl text-base-300 mt-3 font-semibold'>In the middle of every difficulty <br /> lies opportunity</p>
+        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
 
     </div>
   </div> 
@@ -29,7 +29,7 @@ const Banner = () => {
     </div>
       <div className='absolute  left-3 md:left-36 top-1/2'>
         <h2 className='text-5xl text-white font-bold'>LAPTOP MARKET</h2>
-        <p className='text-3xl text-white mt-3 font-semibold'>In the middle of every difficulty <br /> lies opportunity</p>
+        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
 
     </div>
   </div> 
@@ -41,15 +41,15 @@ const Banner = () => {
     </div>
       <div className='absolute left-3 md:left-36 top-1/2'>
         <h2 className='text-5xl text-white font-bold'>LAPTOP MARKET</h2>
-        <p className='text-3xl text-white mt-3 font-semibold'>In the middle of every difficulty <br /> lies opportunity</p>
+        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
 
     </div>
   </div> 
   
 </div>
 {/* web title and web description */}
-<div className='mt-12'>
-      <h3 className='text-3xl uppercase font-bold'>Select the Category</h3>
+<div className='mt-12 max-w-[1240px] mx-auto'>
+      <h3 className='text-3xl uppercase text-black font-bold'>Select the Category</h3>
       
 </div>
         </div>

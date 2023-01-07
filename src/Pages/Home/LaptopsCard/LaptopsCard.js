@@ -4,22 +4,34 @@ import { Link } from 'react-router-dom';
 const LaptopsCard = ({laptop}) => {
     const {_id,picture,description,name,location,resaleprice,sallername,originalprice,yearsofuse}= laptop
     return (
-        <div className="card card-compact bg-blue-100 py-5 shadow-xl">
-        <figure><img className='w-full' style={{width: "580px", height: "270px"}} src={picture} alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
+       <div>
+        <div className="rounded-md shadow-md sm:w-96 bg-blue-100 text-gray-800">
+
+	<img src={picture} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
+	<div className="p-3">
+
+		<div className="flex flex-wrap items-center pt-3 pb-1">
+    <h2 className="card-title text-black">{name}</h2>
           <p>{description?.slice(0,100)}...</p>
-          <div className='flex justify-between'>
-            <h3 className='text-xl font-bold text-blue-600'> Price: ৳ {resaleprice} </h3>
+		</div>
+		<div className="space-y-3">
+    <div className='flex justify-between'>
+            <h3 className='text-xl font-bold text-blue-600'>Discount Price: ৳ {resaleprice} </h3>
             <h3 className='text-xl'> ৳ <s>{originalprice}</s> </h3>
           </div>
-            <p>Location: <span className='text-primary'>{location}</span> </p>
+          <div className='flex justify-between'>
+          <p>Location: <span className='text-blue-600'>{location}</span> </p>
             <p>Use: {yearsofuse} Years</p>
-          <div className="card-actions justify-end">
-            <Link to={`/laptop/${_id}`}><button className="btn btn-info font-bold text-white">View Details</button></Link>
           </div>
-        </div>
-      </div>
+         
+          <div className="card-actions">
+            <Link to={`/laptop/${_id}`}><button className="btn bg-green-500 border-none font-bold text-white">View Details</button></Link>
+          </div>
+		</div>
+	</div>
+</div>
+       
+       </div>
     );
 };
 
