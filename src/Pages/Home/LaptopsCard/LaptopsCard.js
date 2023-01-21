@@ -5,7 +5,7 @@ const LaptopsCard = ({laptop}) => {
     const {_id,picture,description,name,location,resaleprice,sallername,originalprice,yearsofuse}= laptop
     return (
        <div>
-        <div className="rounded-md shadow-md sm:w-96 bg-blue-100 text-gray-800">
+        <div className="rounded-md shadow-md sm:w-96 hover:shadow-2xl text-gray-800">
 
 	<img src={picture} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
 	<div className="p-3">
@@ -25,7 +25,7 @@ const LaptopsCard = ({laptop}) => {
           </div>
          
           <div className="">
-            <Link className="btn bg-green-500 border-none font-bold text-white w-full"to={`/laptop/${_id}`}>View Details</Link>
+            <Link className="btn bg-[#1159AB] border-none font-bold text-white w-full"to={`/laptop/${_id}`}>View Details</Link>
           </div>
 		</div>
 	</div>

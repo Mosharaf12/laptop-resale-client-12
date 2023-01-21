@@ -8,18 +8,18 @@ import './Banner.css'
 const Banner = () => {
     return (
       <>
-        <div className='pt-20'>
-          <div className='py-2 bg-black text-white'>
+        <div className='pt-16'>
+          <div className='py-4 bg-[#223952] text-white'>
             <marquee behavior="scroll" direction="left">The main advantage of a laptop, as compared with a stationary computer,  is its mobility.The lightweight, compact size, the built-in battery within the laptop allowing it to simply move from one place to a different one. </marquee>
           </div>
-          <div className="carousel w-full h-[800px]">
+          <div className="carousel w-full h-[650px]">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={banner1} alt="" className="w-full bannerimg" />
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
       <a href="#slide4" className="btn btn-circle bg-green-500 mr-8">❮</a> 
       <a href="#slide2" className="btn btn-circle bg-green-500">❯</a>
     </div>
-      <div className='absolute  left-3 md:left-36 top-1/2'>
+      <div className='absolute  left-3 md:left-36 top-1/3'>
       <h2 className='text-5xl text-white font-bold'>
       <Typewriter
             words={['LAPTOP MARKET']}
@@ -32,7 +32,7 @@ const Banner = () => {
           
           />
         </h2>
-        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
+        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop .</p>
 
     </div>
   </div> 
@@ -42,9 +42,9 @@ const Banner = () => {
       <a href="#slide1" className="btn btn-circle bg-green-500 mr-8">❮</a> 
       <a href="#slide3" className="btn btn-circle bg-green-500">❯</a>
     </div>
-      <div className='absolute  left-3 md:left-36 top-1/2'>
+      <div className='absolute  left-3 md:left-36 top-1/3'>
         <h2 className='text-5xl text-white font-bold'>LAPTOP MARKET</h2>
-        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
+        <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop. </p>
 
     </div>
   </div> 
@@ -54,7 +54,7 @@ const Banner = () => {
       <a href="#slide2" className="btn btn-circle bg-green-500 mr-8">❮</a> 
       <a href="#slide1" className="btn btn-circle bg-green-500">❯</a>
     </div>
-      <div className='absolute left-3 md:left-36 top-1/2'>
+      <div className='absolute left-3 md:left-36 top-1/3'>
         <h2 className='text-5xl text-white font-bold'>LAPTOP MARKET</h2>
         <p className='text-2xl text-white mt-3 font-semibold'>The main advantage of a laptop, as compared with a stationary computer, <br /> is its mobility.The lightweight, compact size, the built-in battery within the laptop <br /> allowing it to simply move from one place to a different one.</p>
 
@@ -63,8 +63,8 @@ const Banner = () => {
   
 </div>
 {/* web title and web description */}
-<div className='mt-12 max-w-[1240px] mx-auto'>
-      <h3 className='text-3xl uppercase text-black font-bold'>Select the Category</h3>
+<div className='mt-20 max-w-[1240px] mx-auto'>
+      {/* <h3 className='text-3xl uppercase text-center text-[#1159AB] font-bold'>Select the Category</h3> */}
       
 </div>
         </div>

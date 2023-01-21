@@ -3,12 +3,12 @@ import { Zoom } from 'react-reveal';
 
 const MeetSection = () => {
     return (
-        <div>
-            <section className="my-20 bg-blue-100 text-gray-800 rounded-xl">
-	<div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-		<p className="p-2 text-xl text-blue-500 font-bold font-medium tracking-wider text-center uppercase">Development team</p>
+        <div className=''>
+            <section className="my-20 bg-blue-100 text-gray-800 rounded-xl py-20">
+	<div className="container flex flex-col items-center justify-center mx-auto sm:p-10">
+		<p className="pt-0 pb-2 text-xl text-blue-500 font-bold font-medium tracking-wider text-center uppercase">Development team</p>
 		<Zoom>
-		<h1 className="text-3xl font-bold leading-none text-center sm:text-5xl">Meet Our Team Members</h1>
+		<h1 className="text-3xl pb-4 font-bold leading-none text-center sm:text-5xl">Meet Our Team Members</h1>
 		</Zoom>
 		<div className="flex flex-row flex-wrap-reverse justify-center mt-8">
 			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-white text-gray-800">

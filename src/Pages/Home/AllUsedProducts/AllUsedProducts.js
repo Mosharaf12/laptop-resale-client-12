@@ -17,16 +17,21 @@ const AllUsedProducts = () => {
 
     return (
        <div className=''>
-        <div className='my-5 flex justify-start'>
-        <Link to={`/usedlaptop/Dell`}>
-            <button className='btn bg-green-500 border-none mr-5  md:px-10'>Dell</button>
+        <div className=' my-5 pb-20 bg-blue-100 rounded-md'>
+            <div className='py-10'>
+            <h3 className='text-3xl uppercase text-center text-[#1159AB] font-bold'>Select the Category</h3>
+            </div>
+            <div className='flex justify-center'>
+            <Link to={`/usedlaptop/Dell`}>
+            <button className='btn bg-[#1159AB] border-none mr-5  md:px-10'>Dell</button>
       </Link>
         <Link to={`/usedlaptop/Lenovo`}>
-            <button className='btn bg-green-500 border-none mr-5  md:px-10'>Lenovo</button>
+            <button className='btn bg-[#1159AB] border-none mr-5  md:px-10'>Lenovo</button>
       </Link>
         <Link to={`/usedlaptop/Acer`}>
-            <button className='btn bg-green-500 border-none mr-5  md:px-10'>Acer</button>
+            <button className='btn bg-[#1159AB] border-none mr-5  md:px-10'>Acer</button>
       </Link>
+            </div>
         </div>
         <div className='grid md:grid-cols-3 gap-10 my-10'>
             {

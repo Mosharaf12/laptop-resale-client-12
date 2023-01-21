@@ -1,5 +1,6 @@
 import React from 'react';
 import TripSection from '../TripSection';
+import About from './About';
 import AllUsedProducts from './AllUsedProducts/AllUsedProducts';
 
 import Banner from './Banner/Banner';
@@ -20,6 +21,10 @@ const Home = () => {
            <div className='max-w-[1240px] mx-auto'>
            <GallerySection></GallerySection>
            </div>
+           <div className=''>
+           <About></About>
+           </div>
+
             <div className='max-w-[1240px] mx-auto'>
             <Contact></Contact>
             </div>

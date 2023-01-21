@@ -31,7 +31,7 @@ const Header = () => {
   
     return (
       
-        <div className="navbar bg-white z-10 fixed">
+        <div className="navbar bg-[#1D59A0] shadow-xl z-10 fixed">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const Header = () => {
     <div className='flex items-center'>
     <img width="60" height="60" src={logo} alt="" />
 
-    <Link to='/' className="btn btn-ghost normal-case text-black text-xl font-semibold">LAPTOP MARKET</Link>
+    <Link to='/' className="btn btn-ghost normal-case text-white text-xl font-semibold">LAPTOP MARKET</Link>
     </div>
 
   </div>
@@ -52,7 +52,7 @@ const Header = () => {
  
   <div className="navbar-end">
   <div className="hidden lg:flex">
-    <ul className="menu menu-horizontal p-0">
+    <ul className="menu menu-horizontal p-0 text-white font-bold">
      {navItems}
     </ul>
   </div>

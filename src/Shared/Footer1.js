@@ -3,7 +3,7 @@ import logo from '../assests/footer images/footerimages.png'
 
 const Footer1 = () => {
     return (
-        <footer className="footer rounded-t-xl footer-center p-10 bg-blue-100 text-base-content">
+        <footer className="footer rounded-t-xl footer-center p-10 bg-[#1D59A0] text-white">
   <div>
   <img width="100" height="100" src={logo} alt="" />
     <p className='text-xl font-bold'>Laptop Market</p>

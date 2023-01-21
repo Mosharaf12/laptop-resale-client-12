@@ -4,13 +4,13 @@ import { Zoom } from 'react-reveal';
 const Contact = () => {
     return (
         <div className='pt-20 mb-40'>
-            <section className="bg-blue-100 text-gray-900 py-6 rounded-xl">
+            <section className="bg-blue-100 text-gray-900 py-20 rounded-xl">
             <Zoom>
-            <h3 className='text-center text-3xl font-bold text-blue-600 mb-12'>CONTACT US</h3>
+            <h3 className='text-center text-3xl font-bold text-[#1159AB] mb-12'>CONTACT US</h3>
             </Zoom>
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
 		<div className="py-6 md:py-0 md:px-6">
-			<h1 className="text-4xl font-bold">Get in touch</h1>
+			<h1 className="text-4xl text-[#1159AB] font-bold">Get in touch</h1>
 			<p className="pt-2 pb-4">Fill in the form to start a conversation</p>
 			<div className="space-y-4">
 				<p className="flex items-center">
@@ -47,7 +47,7 @@ const Contact = () => {
 				<span className="mb-1">Message</span>
 				<textarea rows="3" name='Message' className="block w-full p-2 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-600 bg-gray-100" spellcheck="false"></textarea>
 			</label>
-			<button type="submit" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-green-500 text-gray-50">Submit</button>
+			<button type="submit" className="w-full px-8 py-3 text-lg rounded uppercase font-bold bg-[#1159AB] text-white">Submit</button>
 		</form>
 	</div>
 </section>
