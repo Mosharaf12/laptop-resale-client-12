@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zoom } from 'react-reveal';
+import TripSection from '../TripSection';
 const About = () => {
     return (
         <div className='py-32 min-h-screen'>
@@ -24,6 +25,7 @@ const About = () => {
 	</div>
 </div>
             </Zoom>
+            
         </div>
     );
 };

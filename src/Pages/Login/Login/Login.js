@@ -47,9 +47,9 @@ const Login = () => {
     }
 
     return (
-            <div className='flex justify-center items-center py-24'>
-            <div className='shadow-xl p-10'>
-                <h3 className='text-3xl text-bold text-center'>Please Login</h3>
+            <div className='flex justify-center items-center py-32'>
+            <div className='shadow-2xl p-10'>
+                <h3 className='text-3xl text-bold font-bold text-[#1159AB] text-center'>Please Login</h3>
                 <form onSubmit={handleSubmitLogin}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Email</span></label>
@@ -59,12 +59,12 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Password</span></label>
                         <input name='password' type='Password' className="input input-bordered w-full max-w-xs mb-5" required />
                     </div>
-                    <input className='btn btn-accent w-full' type="submit" value='Login'  />
+                    <input className='btn bg-[#1159AB] w-full' type="submit" value='Login'  />
                 {setError && <p className='text-error'>{error}</p> }
                 </form>
-                <p className='mt-3'>Add to New<Link to='/register' className='text-primary'> Create an new Account</Link></p>
+                <p className='mt-3'>Add to New<Link to='/register' className='text-[#1159AB]'> Create an new Account</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogle} className='btn btn-outline btn-primary w-full'>Continue With Google</button>
+                <button onClick={handleGoogle} className='btn bg-[#1159AB] text-white w-full'>Continue With Google</button>
     
             </div>
         </div>

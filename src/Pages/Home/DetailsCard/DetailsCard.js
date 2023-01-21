@@ -80,13 +80,13 @@ const DetailsCard = () => {
     },[bluetic])
 
     return (
-      <section className="text-gray-800">
+      <section className="text-gray-800 pt-12">
 	<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
 		<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 			<img src={picture} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
 		</div>
 		<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-			<h1 className="text-5xl font-bold mb-3 leading-none sm:text-6xl">{name}</h1>
+			<h1 className="text-5xl font-bold text-[#1159AB] mb-3 leading-none sm:text-6xl">{name}</h1>
 			<hr />
 			<p className="text-lg mt-5">{description}</p>
 			<div className='md:flex justify-between'>
@@ -119,7 +119,7 @@ const DetailsCard = () => {
 			</div>
 
 
-            <label htmlFor='booking-modal' className="btn btn-info font-bold text-whit mt-3">Book Now!</label>
+            <label htmlFor='booking-modal' className="btn bg-[#1159AB] font-bold text-white mt-3">Book Now!</label>
 
 
 			<div>
@@ -141,7 +141,7 @@ const DetailsCard = () => {
                             !user && <p>Please login</p>
                         }
                        <input htmlFor="booking-modal" type="submit" value='Submit' className={user ?
-                            "btn btn-secondary w-full"
+                            "btn bg-[#1159AB] w-full"
                             :
                             "btn btn-accent w-full btn-disabled"
                         } > 

@@ -3,7 +3,7 @@ import { Zoom } from 'react-reveal';
 
 const Contact = () => {
     return (
-        <div className='pt-20 mb-40'>
+        <div className='pt-20'>
             <section className="bg-blue-100 text-gray-900 py-20 rounded-xl">
             <Zoom>
             <h3 className='text-center text-3xl font-bold text-[#1159AB] mb-12'>CONTACT US</h3>

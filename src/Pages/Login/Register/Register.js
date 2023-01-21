@@ -94,9 +94,9 @@ const Register = () => {
 
 
     return (
-        <div className='flex justify-center items-center py-24'>
-        <div className='shadow-xl p-10'>
-            <h3 className='text-3xl text-bold text-center'>Register Now!</h3>
+        <div className='flex justify-center items-center py-32'>
+        <div className='shadow-2xl p-10'>
+            <h3 className='text-3xl text-bold font-bold text-[#1159AB] text-center'>Register Now!</h3>
             <form onSubmit={handleSubmitRegister}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Name</span></label>
@@ -119,12 +119,12 @@ const Register = () => {
                      <option>seller</option>
                     </select>
                 </div>
-                <input className='btn btn-accent w-full' type="submit" value='Register'  />
+                <input className='btn bg-[#1159AB] w-full' type="submit" value='Register'  />
                 { setError && <p className='text-error'>{error}</p> }
             </form>
-            <p className='mt-3'>Already have an account<Link to='/login' className='text-primary'> please Login</Link></p>
+            <p className='mt-3'>Already have an account<Link to='/login' className='text-[#1159AB]'> please Login</Link></p>
             <div className="divider">OR</div>
-            <button onClick={handleGoogle} className='btn btn-outline btn-primary w-full'>Continue With Google</button>
+            <button onClick={handleGoogle} className='btn bg-[#1159AB] w-full'>Continue With Google</button>
 
         </div>
     </div>

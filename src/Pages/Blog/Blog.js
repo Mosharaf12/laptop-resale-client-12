@@ -1,10 +1,31 @@
 import React from 'react';
+import TripSection from '../TripSection';
 
 const Blog = () => {
     return (
-        <section className="text-gray-800 py-24 ">
-        <div className="container rounded-xl bg-base-200 flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
-            <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Question About Programming </h2>
+      <div>
+        <div className='pt-16'>
+        <div
+      className="hero mb-14 h-80"
+      style={{
+        backgroundImage: `url("https://www.cryptus.in/image/programming_banner.jpg")`,
+      }}
+    >
+      <div className="hero-overlay bg-opacity-40"></div>
+      <div className="hero-content text-center text-neutral-content py-20">
+        <div className="">
+          <h1 className="mb-5 text-3xl font-bold">#Programming</h1>
+          <p className='text-xl'>Programming is the process of creating a set of instructions that <br /> tell a computer how to perform a task.</p>
+          <div className="w-full">
+  
+</div>
+        </div>
+      </div>
+    </div>
+        </div>
+          <section className="text-gray-800 mb-8">
+        <div className="container rounded-xl bg-blue-200 flex flex-col justify-center px-4 pb-8 mx-auto md:p-8">
+            <h2 className="mb-12 text-4xl text-[#1159AB] font-bold leading-none text-center sm:text-5xl">Question About Programming </h2>
             <div className="divide-y divide-gray-300">
                 <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
                     <h3 className="font-semibold md:col-span-5">1 What are the different ways to manage a state in a React application?</h3>
@@ -48,6 +69,7 @@ const Blog = () => {
             </div>
         </div>
     </section>
+      </div>
     );
 };
 

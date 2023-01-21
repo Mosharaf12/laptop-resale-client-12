@@ -10,7 +10,7 @@ const LaptopsCard = ({laptop}) => {
 	<img src={picture} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
 	<div className="p-3">
 
-		<div className="flex flex-wrap items-center pt-3 pb-1">
+		<div className="flex flex-wrap items-center pt-3 pb-3">
     <h2 className="card-title text-black">{name}</h2>
           <p>{description?.slice(0,70)}...</p>
 		</div>

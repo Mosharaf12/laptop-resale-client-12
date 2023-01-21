@@ -27,7 +27,7 @@ const Advertising = () => {
     return (
         <div className='max-w-[1240px] mx-auto pt-20'>
             <Zoom>
-            <h3 className='text-center text-3xl font-bold text-blue-600 mb-12'>ADVERTISING</h3>
+            <h3 className='text-center text-3xl font-bold text-blue-600 pt-14'>ADVERTISING</h3>
             </Zoom>
             
             <div className='flex justify-end my-5'>
