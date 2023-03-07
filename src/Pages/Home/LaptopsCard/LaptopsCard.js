@@ -5,10 +5,10 @@ const LaptopsCard = ({laptop}) => {
     const {_id,picture,description,name,location,resaleprice,sallername,originalprice,yearsofuse}= laptop
     return (
        <div>
-        <div className="rounded-md shadow-md sm:w-96 hover:shadow-2xl text-gray-800">
+        <div className="rounded-md shadow-md sm:w-96 hover:shadow-2xl text-gray-800 border-2 border-blue-200">
 
 	<img src={picture} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
-	<div className="p-3">
+	<div className="p-3 border-2 bg-cyan-50">
 
 		<div className="flex flex-wrap items-center pt-3 pb-3">
     <h2 className="card-title text-black">{name}</h2>
@@ -25,7 +25,7 @@ const LaptopsCard = ({laptop}) => {
           </div>
          
           <div className="">
-            <Link className="btn bg-[#1159AB] border-none font-bold text-white w-full"to={`/laptop/${_id}`}>View Details</Link>
+            <Link className="btn bg-[#1159AB] border-none hover:bg-cyan-700 font-bold text-white w-full"to={`/laptop/${_id}`}>View Details</Link>
           </div>
 		</div>
 	</div>
